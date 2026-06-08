@@ -1,49 +1,35 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+<<<<<<< HEAD
 /**
  * Configuracion de Playwright para el proyecto final.
  * Documentacion: https://playwright.dev/docs/test-configuration
  */
+=======
+try {
+  require('dotenv').config();
+} catch (e) {
+  // dotenv is optional; continue without it if not installed
+}
+
+>>>>>>> 8cee6db940c2af9a7e8fc69a820460b2f69dee76
 module.exports = defineConfig({
   testDir: './tests',
-
-  // Tiempo maximo que puede tardar un test antes de fallar
   timeout: 30 * 1000,
-
-  // Corre los tests en paralelo
   fullyParallel: true,
-
-  // Cantidad de reintentos si un test falla
   retries: 0,
-
-  // Reporter: genera un reporte HTML lindo
   reporter: 'html',
 
   use: {
-    // URL base: podes usar page.goto('/') en vez de la URL completa
-    baseURL: 'https://www.demoblaze.com',
-
-    // Guarda un trace cuando un test falla (util para debuggear)
+    baseURL: process.env.BASE_URL,
     trace: 'on-first-retry',
-
-    // Captura screenshot solo si el test falla
     screenshot: 'only-on-failure',
   },
 
-  // Navegadores donde corren los tests
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    // Descomentar para correr tambien en Firefox y Safari:
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
   ],
 });
