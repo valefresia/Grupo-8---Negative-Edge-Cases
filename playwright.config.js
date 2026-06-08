@@ -1,6 +1,5 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
-
 /**
  * Configuracion de Playwright para el proyecto final.
  * Documentacion: https://playwright.dev/docs/test-configuration
