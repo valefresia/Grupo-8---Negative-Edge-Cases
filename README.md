@@ -10,11 +10,11 @@ Suite de tests automatizados sobre **DemoBlaze** usando Playwright.
 
 > Completen con los nombres de su grupo:
 
-- Nombre Apellido
-- Nombre Apellido
-- Nombre Apellido
+- Rosa Pamela Aguirre
+- Nahuel Benítez
+- Valentina Fresia
 
-**Grupo N - Seccion asignada:** (ej: Cart Management)
+GRUPO 8 — Negative & Edge Cases
 
 ---
 
