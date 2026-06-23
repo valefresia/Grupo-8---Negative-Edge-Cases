@@ -31,7 +31,7 @@ GRUPO 8 — Negative & Edge Cases
 1. Cloná el repositorio:
 
 ```bash
-git clone https://github.com/TU-USUARIO/TU-REPO.git
+git clone https://github.com/valefresia/Grupo-8---Negative-Edge-Cases.git
 cd TU-REPO
 ```
 
