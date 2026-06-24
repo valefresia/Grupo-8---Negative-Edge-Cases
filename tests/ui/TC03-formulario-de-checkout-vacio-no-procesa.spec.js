@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test';
 
+const API = process.env.API_URL;
+
 test('TC03.1 - Name vacio y Credit Card vacio', async ({ page }) => {
-  await page.goto('https://demoblaze.com/index.html');
+  await page.goto(`${BASE_URL}/index.html`);
   await page.getByRole('link', { name: 'Nokia lumia' }).click();
   page.once('dialog', async (dialog) => {
     console.log(`Dialog message: ${dialog.message()}`);
@@ -20,7 +22,7 @@ test('TC03.1 - Name vacio y Credit Card vacio', async ({ page }) => {
 });
 
 test('TC03.2 - Name completo y Credit Card vacio', async ({ page }) => {
-  await page.goto('https://demoblaze.com/index.html');
+  await page.goto(`${BASE_URL}/index.html`);
   await page.getByRole('link', { name: 'Samsung galaxy s6' }).click();
   page.once('dialog', (dialog) => {
     console.log(`Dialog message: ${dialog.message()}`);
@@ -42,7 +44,7 @@ test('TC03.2 - Name completo y Credit Card vacio', async ({ page }) => {
 });
 
 test('TC03.3 - Name vacio y Credit Card completo', async ({ page }) => {
-  await page.goto('https://demoblaze.com/index.html');
+  await page.goto(`${BASE_URL}/index.html`);
   await page.getByRole('link', { name: 'Sony xperia z5' }).click();
   page.once('dialog', (dialog) => {
     console.log(`Dialog message: ${dialog.message()}`);
@@ -61,7 +63,7 @@ test('TC03.3 - Name vacio y Credit Card completo', async ({ page }) => {
 });
 
 test('TC03.4 - Name y Credit Card completos', async ({ page }) => {
-  await page.goto('https://demoblaze.com/index.html');
+  await page.goto(`${BASE_URL}/index.html`);
   await page.getByRole('link', { name: 'Samsung galaxy s7' }).click();
   page.once('dialog', (dialog) => {
     console.log(`Dialog message: ${dialog.message()}`);
